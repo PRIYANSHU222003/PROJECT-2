@@ -1,174 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-  h1:hover{
-            background-color: rgb(164, 182, 220);
-        }
- h2:hover{
-            background-color: rgb(164, 182, 220);
-        }
-         h3:hover{
-            background-color: rgb(164, 182, 220);
-        }
-
-.menu {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.main p {
-  text-align: justify;
-}
-
-.menu a:hover {
-  background-color: #7d57a3; /* Slightly lighter */
-  color: #fff;
-}
-
-/* Programs dropdown box */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #e0d3f5;
-  min-width: 160px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-  z-index: 1;
-  text-align: left;
-  left: 100%; /* appears to the right of menu */
-  top: 0;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 10px 12px;
-  text-decoration: none;
- 
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ccc;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-
-.menu a {
-  background-color: hsl(289, 30%, 46%);
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: black;
-}
-
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color: #ece755;
-  float: left;
-  width: 20%;
-  padding: 15px;
-  margin-top: 7px;
-  text-align: center;
-}
-
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Web player</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
 </head>
-<body style="font-family:Verdana;color:#050000;">
 
-<div style="background-color:#f1b605;padding:15px;text-align:center;">
-    <img src="https://ssipmt.edu.in/assets/images/logo/logo.jpg" alt="logo" width="1500" height="250">
+<body>
+    <div class="container flex bg-black">
+        <div class="left ">
+            <div class="close invert">
+                <img width="30" src="svg/cross.svg" alt="">
+            </div>
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" width="100px" src="svg/logo.svg" alt="" srcset="">
+                </div>
+                <ul>
+                    <li>
+                        <img class="invert" src="svg/home.svg" alt="home">Home
+                    </li>
+                    <li> <img class="invert" src="svg/search.svg" alt="home">search</li>
 
-    
- 
-</div>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert"
+                        src="https://tse1.mm.bing.net/th/id/OIP.PlOV0j-9HnvJ08OfstPZtQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="" srcset="">
+                    <h2>
+                        your library
+                    </h2>
+                </div>
+                <div class="songlist">
+                    <ul>
 
-<div style="overflow:auto">
-  <div class="menu">
-    
-    <div class="dropdown">
-  <a href="#">Programs</a>
-  <div class="dropdown-content">
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div>
+                        <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                        <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a></div>
+                        <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                        <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                        <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                        <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                    </div>
 
-   <div>
+                </div>
 
-    <a href="btech.html">B.Tech</a>
-    <a href="mtech.html">M.Tech</a>
-    <a href="mba.html">MBA</a>
-    
+            </div>
+
+        </div>
+        <div class="right  bg-grey rounded ">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburgercontainer">
+                        <img class="invert hamburger" src="svg/hamburger.svg" alt="">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="fffff"
+                            fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="signupbtn">sign in</button>
+                    <button class="loginbtn">log in</button>
+                </div>
+            </div>
+            <div class="spotify-playlist">
+                <h1>spotify playlist</h1>
+                <div class="card-container">
+                </div>
+                <div class="play-bar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="abovebar">
+
+
+                        <div class="songinfo">
+
+                        </div>
+                        <div class="songbtn">
+                            <img width="35" id="previous" src="svg/previous.svg" alt="">
+                            <img width="35" id="play" src="svg/play.svg " alt="">
+                            <img width="35" id="next" src="svg/nextsong.svg" alt="">
+                        </div>
+                        <div class="timevol"> 
+                            <div class="songtime">
+                            </div>
+                            <div class="volume">
+                                <img src="svg/volume.svg" width="45" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    <script src="js/script.js"></script>
+</body> 
 
-
-
-  
-    
-    <div class="dropdown">
-  <a href="#">Academics</a>
-  <div class="dropdown-content">
-
-   <div>
-
-    <a href="admission.html">Admission Policies</a>
-    <a href="rules.html">Rules & Regulations</a>
-    <!-- <a href="#">Fees Structure</a> -->
-   
-    </div>
-  </div>
-</div> 
-
-
-    <a href="forms.html"> Admission</a>
-    <a href="imagegallery.html">Gallery</a>
-    <a href="contactus.html">Contact us</a>
-    
-  </div>
-
-  <div class="main">
-    <h2>Affiliated to Chhattisgarh Swami Vivekanand Technical University, Bhilai
-Approved by All India Council for Technical Education, New Delhi</h2>
-    <p>Lavishly spread over 17 acres of lush green and pollution free environment, SSIPMT, Raipur has created a unique atmosphere of educational excellence in the capital city of Raipur. The institute was established in the year 2008 with due approval from All India Council of Technical Education (AICTE), New Delhi. Our Institute has been found tobe of Quality Management System Standard ie. ISO Certified(NS-EN ISO 9001 : 2008 / ISO 9001 : 2008). SSIPMT, Raipur aims to provide best quality Engineering and Management education to its students and strives to inculcate the best of its cultural heritage in the future leaders of the corporate world.</p>
-
-    <p>SSIPMT, Raipur is proud to have achieved extraordinary university results all these years since its inception in 2008. Imparting education in almost all major streams of engineering and management, SSIPMT, Raipur has left no stone unturned for the betterment and progress of its students and hence, the society as a whole. To achieve its aim SSIPMT, Raipur provides multi-faceted learning to its students. We have a team of dedicated and learned teachers inculcating value-based education to the students. Also a highly dynamic and full blown Training and Placement Department provides each and every student a fair chance to transform themselves into a professional and commence their career as soon as they complete their course.</p>
-
-    <img src="https://ssipmt.edu.in/assets/images/about/ssipmt-top.jpg?v2" alt="college image">
-  </div>
-
-  <div class="right">
-    <h2>About</h2>
-    <p>Situated in the heart of the Capital city of Chhattisgarh, SSIPMT, Raipur became an insignia amongst the technical institutions in Central India. We are the only institute in the region & among the only 49 institutes across the country that have been selected for AICTE IDEA Lab 2021 that provides students with a platform to explore innovative ideas, create prototypes, and collaborate with peers and experts to bring their ideas to life.</p>
-  </div>
-</div>
-
-<div style="background-color:#48635f;text-align:center;padding:10px;margin-top:7px;">© copyright ssipmt.com</div>
-
-
-
-</body>
 </html>
